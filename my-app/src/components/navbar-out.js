@@ -1,3 +1,5 @@
+import "./styling.css"
+import "./bootstrap.css"
 const NavbarOut = ()=>{
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
