@@ -11,7 +11,7 @@ const Hero = ()=>{
                     We leverage the U.S Census Data API which contains millions of reliable datasets.
                 </h5>
                 <div className="d-grid gap-3 d-md-block">
-                    <button className="btn btn-primary btn-lg mx-3" type="button">Try it out</button>
+                    <button className="btn btn-primary btn-lg mx-3" style= {{"color":"white"}} type="button">Try it out</button>
                     <button className="btn btn-secondary btn-lg mx-3" type="button">Sign Up</button>
                 </div>
             </div>

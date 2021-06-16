@@ -1,6 +1,6 @@
 .hero-image{
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.infoq.com/news/2020/10/svelte-d3-animation-data-vis/en/headerimage/croppted-data+visualization-1603230969620.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://res.infoq.com/news/2020/10/svelte-d3-animation-data-vis/en/headerimage/croppted-data+visualization-1603230969620.jpeg");
   
     /* Set a specific height */
     height: 100vh;
