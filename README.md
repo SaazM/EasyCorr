@@ -7,5 +7,4 @@ This can be used for a lot of things from research to just messing around the we
 Downloading a file from the census website and using excel or numbers to get statistical intuition involves a tedious process. First of all you may have to download gigabytes of data on your computer. Secondly it takes time to navigate such a large excel file(some datasets have over a hundred columns) and choose the columns you want to correlate, compared to EasyCorr which will allow users to query datasets and correlate them in a click of a button.
 ## How?
 Simple, I will use react for the front end, django for the back end and I will utilize the census data api. I will solve the details as I go.
-## What stage am I in?
-Right now I am just working on the front end of the website, thats why the only thing in this repo is a react app, I still need to get a couple more weeks of experience using django before I can start making the django api(backend).
+(test)
