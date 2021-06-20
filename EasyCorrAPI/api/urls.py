@@ -1,6 +1,5 @@
 from django.urls import path, include
-from .views import main
-
+from .views import CorrelationView
 urlpatterns = [
-    path("", main)
+    path("", CorrelationView.as_view())
 ]
