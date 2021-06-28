@@ -5,9 +5,9 @@ class CorrelationSerializer(serializers.ModelSerializer):
     corrVal = serializers.ReadOnlyField()
     class Meta:
         model = Correlation
-        fields = ("id", "apiLink1", "name1", "apiLink2", "name2", "corrVal", "lastUpdated")
+        fields = ("id", "code1","code2", "corrVal", "created_at")
 
 class CreateCorrelationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Correlation
-        fields = ("apiLink1", "name1", "apiLink2", "name2")
+        fields = ("code1", "code2")
