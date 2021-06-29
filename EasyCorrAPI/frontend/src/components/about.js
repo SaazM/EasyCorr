@@ -1,14 +1,10 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React from "react";
 import "../../static/css/index.css";
-export default class About extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const About = () => {
     return (
-        <h1>About</h1>
-    );
-  }
+      <h1>About</h1>
+    )
+  
 }
+
+export default About

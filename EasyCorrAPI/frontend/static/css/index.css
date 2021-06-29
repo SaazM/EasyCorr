@@ -88,6 +88,17 @@
 .txt-type > .txt {
     border-right: 0.2rem solid #777;
 }
+.cardH{
+    transition: box-shadow 0.5s, top 0.5s;
+    position:relative;
+    margin-top:10px;
+    top:0px;
+}
+.cardH:hover{
+    box-shadow: 10px 10px 15px grey;   
+    top:-10px;
+
+}
 
 @media (min-width:768px) and (max-width:992px){
     .head{

@@ -1,13 +1,6 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React from "react";
 import "../../static/css/index.css";
-// import "../../static/css/bootstrap.css";
-export default class Hero extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const Hero = ({ reference, click }) => {
     return (
         <div className="hero-image">
             <div className="container rounded">
@@ -18,11 +11,12 @@ export default class Hero extends Component {
                     We leverage the U.S Census Data API which contains millions of reliable datasets.
                 </h5>
                 <div className="d-grid gap-3 d-md-block">
-                    <button className="btn btn-primary btn-lg mx-3" style= {{"color":"white"}} type="button">Try it out</button>
+                    <a ref={reference} onClick={click} className="btn btn-primary btn-lg mx-3" style= {{"color":"white"}} type="button" >Try it out</a>
                     <button className="btn btn-secondary btn-lg mx-3" type="button">Sign Up</button>
                 </div>
             </div>
         </div>
     );
-  }
+  
 }
+export default Hero

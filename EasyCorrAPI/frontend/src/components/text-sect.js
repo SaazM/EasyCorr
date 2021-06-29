@@ -69,12 +69,8 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
-export default class TextSect extends Component {
-  constructor(props) {
-    super(props);
-  }
+const  TextSect = () => {
 
-  render() {
     return (
         <div>
             <div class="head">Versatile use cases</div>
@@ -86,6 +82,8 @@ export default class TextSect extends Component {
             </p>
         </div>
     );
-  }
+  
   
 }
+
+export default TextSect

@@ -1,13 +1,8 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React from "react";
 import "../../static/css/index.css";
 import "../../static/css/bootstrap.css";
-export default class NavbarOut extends Component {
-  constructor(props) {
-    super(props);
-  }
+const  NavbarOut = () => {
 
-  render() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
@@ -34,5 +29,6 @@ export default class NavbarOut extends Component {
         </div>
         </nav>
     );
-  }
+  
 }
+export default NavbarOut

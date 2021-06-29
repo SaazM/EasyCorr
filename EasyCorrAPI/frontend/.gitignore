@@ -39,3 +39,5 @@ yarn-error.log*
 .cache
 .eslintcache
 package-lock.json
+
+*.hot-update.*

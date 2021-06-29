@@ -7,7 +7,10 @@ class CorrelationSerializer(serializers.ModelSerializer):
         model = Correlation
         fields = ("id", "code1","code2", "corrVal", "created_at")
 
-class CreateCorrelationSerializer(serializers.ModelSerializer):
+class CreateCorrelationSerializer(serializers.Serializer):
+    code1 = serializers.CharField(max_length=20)
+    code2 = serializers.CharField(max_length=20)
+class GetCorrelationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Correlation
         fields = ("code1", "code2")
