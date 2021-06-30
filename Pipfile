@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 requests = "*"
 pandas = "*"
+django-rest-auth = "*"
 
 [dev-packages]
 

@@ -39,7 +39,21 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "api.apps.ApiConfig",
     "rest_framework",
-    "frontend.apps.FrontendConfig"
+    'rest_framework.authtoken',
+    'rest_auth',
+    "frontend.apps.FrontendConfig",
+     'django.contrib.sites',
+     'allauth',
+     'allauth.account',
+     'rest_auth.registration',
+     'allauth.socialaccount',
+     'allauth.socialaccount.providers.facebook',
+     'allauth.socialaccount.providers.google',
+     'corsheaders',
+    'dj_rest_auth',
+    "rest_framework.permissions",
+    "rest_framework.authentication",
+
 ]
 
 MIDDLEWARE = [
@@ -50,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'EasyCorrAPI.urls'
@@ -69,6 +84,22 @@ TEMPLATES = [
         },
     },
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    "google": {
+        "APP": {
+            "client_id": "753315723150-fhk32vsimcb1h648409788j5ir5fs1o9.apps.googleusercontent.com",
+            "secret": "JSLmKmZB9-I8iZWE6ZBCCTir",
+        },
+    },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
 
 WSGI_APPLICATION = 'EasyCorrAPI.wsgi.application'
 
@@ -126,3 +157,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SITE_ID = 1
+
+CORS_ORIGIN_ALLOW_ALL = True

@@ -19,7 +19,7 @@ const  NavbarOut = () => {
                 <a className="nav-link" href="/about">About</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="/signin">Sign In</a>
+                <a className="nav-link" href="/login">Sign In</a>
                 </li>
                 <li className="nav-item">
                 <a className="nav-link" href="/contact">Contact</a>
