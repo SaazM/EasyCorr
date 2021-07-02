@@ -8,7 +8,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
 from .funcs import corrValF
-import json
 # Create your views here.
 
 class CorrelationView(generics.ListAPIView):
@@ -21,13 +20,9 @@ class CorrelationView(generics.ListAPIView):
             if user._wrapped.__class__ == object:
                 user._setup()
             user = user._wrapped
-        print("-------------------------------")
-        print(self.request.data)
         return Correlation.objects.filter(user=user)
 class GetCorrelationView(APIView):
     def post(self, request):
-        print("-------------------------------")
-        print(request.data)
         serializer = GetCorrelationSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data

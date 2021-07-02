@@ -53,14 +53,6 @@ const Correlation = ({data1, data2}) =>{
             console.log(data)
         })
     }
-    const handleGet = (e) =>{
-
-        fetch("/api/corr").then((response) => 
-            response.json()
-        ).then((data)=>{
-            console.log(data)
-        })
-    }
     
 
     function renderCorr(){
@@ -87,7 +79,6 @@ const Correlation = ({data1, data2}) =>{
                     {renderCorr()}
                 </div>
             </div>
-            <center><button type="submit" class="btn btn-secondary btn-lg" onClick={handleGet} style= {{"color":"white"}}>gettt</button></center>
         </div>
     )
 }

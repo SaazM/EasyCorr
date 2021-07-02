@@ -6,7 +6,8 @@ class CorrelationSerializer(serializers.ModelSerializer):
     corrVal = serializers.ReadOnlyField()
     class Meta:
         model = Correlation
-        fields = ("id", "code1","code2", "corrVal", "user", "created_at")
+        fields = '__all__'
+
 
 class CreateCorrelationSerializer(serializers.Serializer):
     code1 = serializers.CharField(max_length=20)

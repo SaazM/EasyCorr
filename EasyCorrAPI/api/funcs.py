@@ -8,7 +8,7 @@ def corrValF(code1, code2):
     state='*'
     county='*'
     base_url = f'https://api.census.gov/data/{year}/{dsource}/{dname}'
-    data_url = f'{base_url}?get={cols}&for=county:{county}&in=state:{state}'
+    data_url = f'{base_url}?get={cols}&for=county:{county}&in=state:{state}&key=1fd0f4ca9457d156dbe52d969b668612f67eba2a'
     response=requests.get(data_url)
     data=response.json()
     df=pd.DataFrame(data[1:], columns=data[0])
