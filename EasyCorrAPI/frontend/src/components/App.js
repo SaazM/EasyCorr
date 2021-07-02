@@ -28,7 +28,7 @@ function App(){
       <Router>
         <Switch>
             <Route exact path="/">
-                <Homepage x={loggedin} y={setLoggedin}/>
+                <Homepage x={loggedin}/>
             </Route>
             <Route path="/about" component={About} />
             <Route path="/login" >

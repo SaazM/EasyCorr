@@ -1,13 +1,16 @@
 import React, {useState} from "react";
 import "../../static/css/index.css";
 import Cookies from 'js-cookie'
-const Correlation = ({data1, data2}) =>{
+import { render } from "react-dom";
+const Correlation = ({data1, data2, looged}) =>{
 
     const [corr,setCorr] = useState("");
     const [notSet,setNotSet] = useState(true);
     const [loading,setLoading] = useState(true);
+    const [notSetSign, setNotSetSign] = useState(false)
     const handleSubmit = (e) => {
         setNotSet(false)
+        setNotSetSign(false)
         if(! data1 || ! data2) {
             setLoading(true)
             setCorr("You need to pick 2 datasets")
@@ -38,32 +41,52 @@ const Correlation = ({data1, data2}) =>{
         }
     }
     const handleSave = (e) =>{
-        const requestOptions = {
-            method: "POST",
-            headers: {"Content-Type": "application/json", "X-CSRFToken": Cookies.get('csrftoken')},
-            body: JSON.stringify({
-                code1: data1,
-                code2: data2,
-            })
-        }
-        fetch("/api/create-corr", requestOptions).then((response) => {
-            response.json();
+        if(corr){
+            const requestOptions = {
+                method: "POST",
+                headers: {"Content-Type": "application/json", "X-CSRFToken": Cookies.get('csrftoken')},
+                body: JSON.stringify({
+                    code1: data1,
+                    code2: data2,
+                })
             }
-        ).then((data)=>{
-            console.log(data)
-        })
+            fetch("/api/create-corr", requestOptions).then((response) => {
+                response.json();
+                }
+            ).then((data)=>{
+                console.log(data)
+            })
+            window.location.href = "http://localhost:8000/";
+        }
+        else{
+            setNotSetSign(true)
+            console.log(notSetSign)
+        }
     }
     
 
     function renderCorr(){
-        if(notSet){
+        if(notSetSign){
+            return <center><h3 class="d-inline">You have to get correlation before saving</h3></center>
+        }
+        else if(notSet){
             return <center><h3 class="d-inline">Make Correlation ...</h3></center>
         }
         else if(loading){
-            return <center><h3 class="d-inline">Loading ...</h3></center>
+            return <center>            <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div></center>
         }
         else{
             return <center><h3 class="d-inline">{corr}</h3></center>
+        }
+    }
+    function renderSave(){
+        if(looged){
+            return(<center><button type="submit" class="btn btn-secondary btn-lg" onClick={handleSave} style= {{"color":"white"}}>Save Corr</button></center>)
+        }
+        else{
+            return(<div className="none"></div>)
         }
     }
     return(
@@ -73,7 +96,7 @@ const Correlation = ({data1, data2}) =>{
                     <center><button type="submit" class="btn btn-primary btn-lg" onClick={handleSubmit} style= {{"color":"white"}}>Get Corr</button></center>
                 </div>
                 <div className="col-6 col-md-4 mt-5 mb-5">
-                <center><button type="submit" class="btn btn-secondary btn-lg" onClick={handleSave} style= {{"color":"white"}}>Save Corr</button></center>
+                    {renderSave()}
                 </div>
                 <div className="col-12 col-md-4 mt-5 mb-5">
                     {renderCorr()}

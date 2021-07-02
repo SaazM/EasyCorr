@@ -66,3 +66,17 @@ class CreateCorrelationView(APIView):
             correlation.save()
         return Response(CorrelationSerializer(correlation).data, status=status.HTTP_201_CREATED) 
 
+class DeleteCorrelationView(APIView):
+    authentication_classes = [SessionAuthentication, TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    def get_object(self, pk):
+        # Returns an object instance that should 
+        # be used for detail views.
+        try:
+            return Correlation.objects.get(pk=pk)
+        except Correlation.DoesNotExist:
+            raise Http404
+    def delete(self, request, pk, format=None):
+        correlation = self.get_object(pk)
+        correlation.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

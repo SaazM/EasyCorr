@@ -33,7 +33,6 @@ const  NavbarOut = ({loggedin}) => {
                         <a className="nav-link" href="/"onClick={logout}>Sign Out</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="/contact">Contact</a>
                         </li>
                     </ul>
                     </div>
@@ -61,7 +60,6 @@ const  NavbarOut = ({loggedin}) => {
                     <a className="nav-link" href="/login">Sign In</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="/contact">Contact</a>
                     </li>
                 </ul>
                 </div>

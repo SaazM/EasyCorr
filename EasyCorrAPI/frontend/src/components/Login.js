@@ -5,8 +5,8 @@ import "../../static/css/index.css";
 const Login = () => {
 
     return (
-        <div>
-            <GoogleSocialAuth />
+        <div className="mt-5">
+            <center><GoogleSocialAuth /></center>
         </div>
 
     );

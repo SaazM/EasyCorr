@@ -24,7 +24,7 @@ const HomePage = ({x}) => {
           <div className="col-12 col-md-6 mt-5">
             <SearchCard data={data2} setData={setData2}/>
           </div>
-          <Correlation data1={data1} data2={data2} />
+          <Correlation data1={data1} data2={data2} looged={x} />
         </div>
       </div>
       <div style={{"height":"200px"}}>
