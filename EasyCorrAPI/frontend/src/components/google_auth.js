@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
 import googleLogin from "../services/googleLogin"
-class GoogleSocialAuth extends Component {
+import { useHistory } from 'react-router-dom'
+const GoogleSocialAuth = () =>{
 
-  render() {
+    let history = useHistory();
     const responseGoogle = async(response) => {
         let googleResponse  = await googleLogin(response.accessToken)
         console.log(googleResponse);
         console.log(response);
+        window.location.href = "http://localhost:8000/";
     }
     return (
       <div className="App">
@@ -21,7 +23,7 @@ class GoogleSocialAuth extends Component {
         />
       </div>
     );
-  }
+
 }
 
 export default GoogleSocialAuth;

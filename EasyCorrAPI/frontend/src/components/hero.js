@@ -12,7 +12,7 @@ const Hero = ({ reference, click }) => {
                 </h5>
                 <div className="d-grid gap-3 d-md-block">
                     <a ref={reference} onClick={click} className="btn btn-primary btn-lg mx-3" style= {{"color":"white"}} type="button" >Try it out</a>
-                    <button className="btn btn-secondary btn-lg mx-3" type="button">Sign Up</button>
+                    <a href="/login" className="btn btn-secondary btn-lg mx-3" type="button">Sign In</a>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect  } from "react";
 import { render } from "react-dom";
 import About from "./about";
 import Homepage from "./home-page";
@@ -11,17 +11,29 @@ import {
 } from "react-router-dom";
 
 function App(){
-
+  const [loggedin, setLoggedin] = useState(false);
+    fetch("/api/is-auth").then((response) => 
+      response.json()
+    ).then((data)=>{
+      if(data.val==="True"){
+        setLoggedin(true);
+      }
+      else{
+        setLoggedin(false);
+      }
+    })
   return (
     <div>
-      <NavbarOut />
+      <NavbarOut loggedin={loggedin}/>
       <Router>
         <Switch>
             <Route exact path="/">
-                <Homepage />
+                <Homepage x={loggedin} y={setLoggedin}/>
             </Route>
             <Route path="/about" component={About} />
-            <Route path="/login" component={Login} />
+            <Route path="/login" >
+              <Login x={loggedin} y={setLoggedin}/>
+            </Route>
         </Switch>
       </Router>        
     </div>
