@@ -5,7 +5,7 @@ const Hero = ({ reference, click }) => {
         <div className="hero-image">
             <div className="container rounded">
                 <h1 className="hero-text display-1 mb-4 mt-4">
-                    Gain Statistical Insights From <span style={{color: "#EE4B2B"}}>Reliable Data</span>
+                    Search for correlations using <span style={{color: "#EE4B2B"}}>Reliable Data</span>
                 </h1>
                 <h5 className="hero-text display-1 mb-5">
                     We leverage the U.S Census Data API which contains millions of reliable datasets.

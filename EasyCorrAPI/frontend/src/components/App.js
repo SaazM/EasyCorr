@@ -4,6 +4,7 @@ import About from "./about";
 import Homepage from "./home-page";
 import NavbarOut from "./navbar-out";
 import Login from "./Login";
+import Footer from "./footer"
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +13,7 @@ import {
 
 function App(){
   const [loggedin, setLoggedin] = useState(false);
+  useEffect(() => {
     fetch("/api/is-auth").then((response) => 
       response.json()
     ).then((data)=>{
@@ -22,6 +24,7 @@ function App(){
         setLoggedin(false);
       }
     })
+  }, [])
   return (
     <div>
       <NavbarOut loggedin={loggedin}/>
@@ -35,7 +38,8 @@ function App(){
               <Login x={loggedin} y={setLoggedin}/>
             </Route>
         </Switch>
-      </Router>        
+      </Router>
+      <Footer />
     </div>
 
   );

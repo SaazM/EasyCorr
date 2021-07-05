@@ -88,6 +88,19 @@
 .txt-type > .txt {
     border-right: 0.2rem solid #777;
 }
+.page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
 .cardH{
     transition: box-shadow 0.5s, top 0.5s;
     position:relative;

@@ -5,6 +5,6 @@ const options = [
     { value: "DP02_0071PE", label: "Percentage of population with disability status"},
     { value: "DP02_0003PE", label: "Percent of housholds with a married couple and a child"},
     { value: "DP02_0016E", label: "Average houshold size"},
-    { value: "DP02_0030PE", label: "Percent of males 15 and over divorced" }
+    { value: "DP02_0030PE", label: "Percent of males(over 15) divorced" },
   ]
 module.exports = {options};
