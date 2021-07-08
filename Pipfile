@@ -9,6 +9,7 @@ djangorestframework = "*"
 requests = "*"
 pandas = "*"
 django-rest-auth = "*"
+gunicorn = "*"
 
 [dev-packages]
 
