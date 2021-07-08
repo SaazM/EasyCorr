@@ -9,7 +9,7 @@ const  NavbarOut = ({loggedin}) => {
         fetch("/dj-rest-auth/logout/", requestOptions).then((response) => 
             console.log("logged out")
         )
-        window.location.href = "http://localhost:8000/";
+        window.location.href = "/";
 
 
     }

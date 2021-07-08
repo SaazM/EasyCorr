@@ -20,7 +20,7 @@ const PostGrid = () =>{
         console.log(id)
         fetch(`/api/delete/${id}`, requestOptions).then((response) => {
             response.json();
-            window.location.href = "http://localhost:3000/";
+            window.location.href = "/";
             }
         )
 
