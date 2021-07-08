@@ -40,7 +40,7 @@ django-heroku==0.0.0
 django-jsonfield==1.4.1
 django-rest-auth==0.9.5
 djangorestframework==3.11.2
-djangorestframework-simplejwt==4.4.0
+djangorestframework-simplejwt==4.6.0
 drf-yasg==1.20.0
 dropbox==11.5.0
 entrypoints==0.3
