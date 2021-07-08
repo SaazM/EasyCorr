@@ -10,6 +10,7 @@ requests = "*"
 pandas = "*"
 django-rest-auth = "*"
 gunicorn = "*"
+django-heroku = "*"
 
 [dev-packages]
 
