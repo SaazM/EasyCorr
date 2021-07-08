@@ -1,6 +1,6 @@
 # EasyCorr
 ## Web Page Beta V.0.1
-[Easy Corr Website](https://www.google.com "Easy Corr Homepage")
+<a href="http://easycorr.com/" target="_blank">Easy Corr Website</a>
 ## Description
 EasyCorr is a website that allows users to gain useful statistical information such as correlations, pearson-r, etc from Census Data(I may expand into different data sources later but for now census data is reliable), an example of this is correlating median income to median cost to percent of people who have a bachelors. Users will also be able to make an account so that they can save correlations that they made.
 ## Why
