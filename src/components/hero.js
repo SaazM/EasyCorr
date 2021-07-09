@@ -11,8 +11,10 @@ const Hero = ({ reference, click }) => {
                     We leverage the U.S Census Data API which contains millions of reliable datasets.
                 </h5>
                 <div className="d-grid gap-3 d-md-block">
-                    <a ref={reference} onClick={click} className="btn btn-primary btn-lg mx-3" style= {{"color":"white"}} type="button" >Try it out</a>
-                    <a href="/login" className="btn btn-secondary btn-lg mx-3" type="button">Sign In</a>
+                    <button ref={reference} onClick={click} className="btn btn-primary btn-lg mx-3" style= {{"color":"white"}} type="button" >Try it out</button>
+                    <a href="/login">
+                        <button className="btn btn-secondary btn-lg mx-3" type="button">Sign In</button>
+                    </a>
                 </div>
             </div>
         </div>
