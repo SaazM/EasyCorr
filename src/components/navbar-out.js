@@ -2,17 +2,6 @@ import React from "react";
 import "../static/css/index.css";
 import "../static/css/bootstrap.css";
 const  NavbarOut = ({loggedin}) => {
-    const logout = () =>{
-        const requestOptions = {
-            method: "POST",
-        }
-        fetch("/dj-rest-auth/logout/", requestOptions).then((response) => 
-            console.log("logged out")
-        )
-        window.location.href = "/";
-
-
-    }
     if(loggedin){
         return(
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,9 +17,6 @@ const  NavbarOut = ({loggedin}) => {
                         </li>
                         <li className="nav-item">
                         <a className="nav-link" href="/about">About</a>
-                        </li>
-                        <li className="nav-item">
-                        <a className="nav-link" href="/"onClick={logout}>Sign Out</a>
                         </li>
                         <li className="nav-item">
                         </li>
