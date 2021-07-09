@@ -23,7 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'b-m!99h$nvsv9=6h3@rf7mb4y_hyb+okh=!6(1b5bg*c3wo^7x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -174,3 +173,7 @@ LOGIN_REDIRECT_URL = "/"
 
 import django_heroku
 django_heroku.settings(locals())
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_SSL_REDIRECT = True
+DEBUG = False
