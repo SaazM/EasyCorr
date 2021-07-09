@@ -7,7 +7,7 @@ const GoogleSocialAuth = () =>{
         let googleResponse  = await googleLogin(response.accessToken)
         console.log(googleResponse);
         console.log(response);
-        window.location.href = "www.easycorr.com";
+        window.location.href = "https://www.easycorr.com";
     }
     return (
       <div className="App">
