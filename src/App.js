@@ -4,6 +4,7 @@ import Homepage from "./components/home-page";
 import NavbarOut from "./components/navbar-out";
 import Login from "./components/Login";
 import Footer from "./components/footer";
+import Privacy from "./components/privacy"
 import {
   BrowserRouter as Router,
   Switch,
@@ -35,6 +36,9 @@ function App(){
             <Route path="/about" component={About} />
             <Route path="/login" >
               <Login x={loggedin} y={setLoggedin}/>
+            </Route>
+            <Route path="/privacy" >
+                <Privacy />
             </Route>
         </Switch>
       </Router>
